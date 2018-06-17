@@ -16,26 +16,76 @@ class QuotesViewController: UIViewController {
     @IBOutlet weak var lblAutor: UILabel!
     @IBOutlet weak var ctLbTop: NSLayoutConstraint!
     
+    let quotesManager = QuotesManager()
+    var timer:Timer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        prepareQuote()
     }
-    */
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        prepareQuote()
+    }
 
+    func prepareQuote() {
+        
+        timer?.invalidate()
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 8.0, repeats: true) { (timer) in
+            self.showRandomQuote()
+        }
+        showRandomQuote()
+    }
+
+    func showRandomQuote(){
+        let quote = quotesManager.getRandomQuote()
+        lblQuote.text = quote.quote
+        lblAutor.text = quote.autor
+        imgPhoto.image = UIImage(named: quote.image)
+        imgPhotoBg.image = imgPhoto.image
+        
+        lblQuote.alpha = 0.0
+        lblAutor.alpha = 0.0
+        imgPhoto.alpha = 0.0
+        imgPhotoBg.alpha = 0.0
+        ctLbTop.constant = 50
+        view.layoutIfNeeded()
+        
+        UIView.animate(withDuration: 2.5) {
+            self.lblQuote.alpha = 1.0
+            self.lblAutor.alpha = 1.0
+            self.imgPhoto.alpha = 1.0
+            self.imgPhotoBg.alpha = 0.25
+            self.ctLbTop.constant = 10
+            self.view.layoutIfNeeded()
+        }
+        
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
