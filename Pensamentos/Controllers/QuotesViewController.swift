@@ -14,6 +14,7 @@ class QuotesViewController: UIViewController {
     @IBOutlet weak var imgPhotoBg: UIImageView!
     @IBOutlet weak var lblQuote: UILabel!
     @IBOutlet weak var lblAutor: UILabel!
+    @IBOutlet weak var ctLbTop: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()

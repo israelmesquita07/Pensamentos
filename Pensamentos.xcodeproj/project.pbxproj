@@ -15,7 +15,7 @@
 		071FEEEB20D3511D0017D4B2 /* Savoye LET.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 071FEEE920D3511C0017D4B2 /* Savoye LET.ttc */; };
 		07C826EC20D6810F00912415 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C826EB20D6810F00912415 /* QuotesViewController.swift */; };
 		07C826EE20D6815100912415 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C826ED20D6815100912415 /* SettingsViewController.swift */; };
-		07C826F320D686C500912415 /* Quotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C826F220D686C500912415 /* Quotes.swift */; };
+		07C826F320D686C500912415 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C826F220D686C500912415 /* Quote.swift */; };
 		07C826F520D6882C00912415 /* QuotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C826F420D6882C00912415 /* QuotesManager.swift */; };
 		07C826F720D6891A00912415 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C826F620D6891A00912415 /* Configuration.swift */; };
 /* End PBXBuildFile section */
@@ -31,7 +31,7 @@
 		071FEEE920D3511C0017D4B2 /* Savoye LET.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Savoye LET.ttc"; sourceTree = "<group>"; };
 		07C826EB20D6810F00912415 /* QuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
 		07C826ED20D6815100912415 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		07C826F220D686C500912415 /* Quotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quotes.swift; sourceTree = "<group>"; };
+		07C826F220D686C500912415 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		07C826F420D6882C00912415 /* QuotesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesManager.swift; sourceTree = "<group>"; };
 		07C826F620D6891A00912415 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,8 +67,8 @@
 			isa = PBXGroup;
 			children = (
 				071FEED620D350850017D4B2 /* AppDelegate.swift */,
-				07C826F120D686AD00912415 /* Models */,
 				071FEEEC20D351220017D4B2 /* Files */,
+				07C826F120D686AD00912415 /* Models */,
 				07C826F020D681A500912415 /* Views */,
 				07C826EF20D6817400912415 /* Controllers */,
 				071FEEDD20D350850017D4B2 /* Assets.xcassets */,
@@ -107,7 +107,7 @@
 		07C826F120D686AD00912415 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				07C826F220D686C500912415 /* Quotes.swift */,
+				07C826F220D686C500912415 /* Quote.swift */,
 				07C826F420D6882C00912415 /* QuotesManager.swift */,
 				07C826F620D6891A00912415 /* Configuration.swift */,
 			);
@@ -190,7 +190,7 @@
 			files = (
 				07C826F720D6891A00912415 /* Configuration.swift in Sources */,
 				07C826F520D6882C00912415 /* QuotesManager.swift in Sources */,
-				07C826F320D686C500912415 /* Quotes.swift in Sources */,
+				07C826F320D686C500912415 /* Quote.swift in Sources */,
 				07C826EC20D6810F00912415 /* QuotesViewController.swift in Sources */,
 				071FEED720D350850017D4B2 /* AppDelegate.swift in Sources */,
 				07C826EE20D6815100912415 /* SettingsViewController.swift in Sources */,
