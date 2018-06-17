@@ -18,6 +18,7 @@ class QuotesViewController: UIViewController {
     
     let quotesManager = QuotesManager()
     var timer:Timer?
+    let config = Configuration.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,13 @@ class QuotesViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        formatView()
+    }
+    
+    func formatView(){
+        view.backgroundColor = config.colorScheme == 0 ? .white : UIColor(red: 156.0/255.0, green: 68.0/255.0, blue: 15.0/255.0, alpha: 1.0)
+        lblQuote.textColor = config.colorScheme == 0 ? .black : .white
+        lblAutor.textColor = config.colorScheme == 0 ? UIColor(red: 192.0/255.0, green: 96.0/255.0, blue: 49.0/255.0, alpha: 1.0) : .yellow
         prepareQuote()
     }
     
@@ -35,9 +43,10 @@ class QuotesViewController: UIViewController {
     func prepareQuote() {
         
         timer?.invalidate()
-        
-        timer = Timer.scheduledTimer(withTimeInterval: 8.0, repeats: true) { (timer) in
-            self.showRandomQuote()
+        if config.autoRefresh {
+            timer = Timer.scheduledTimer(withTimeInterval: config.timeInterval, repeats: true) { (timer) in
+                self.showRandomQuote()
+            }
         }
         showRandomQuote()
     }
