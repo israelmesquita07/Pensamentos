@@ -14,7 +14,7 @@ class QuotesViewController: UIViewController {
     @IBOutlet weak var imgPhotoBg: UIImageView!
     @IBOutlet weak var lblQuote: UILabel!
     @IBOutlet weak var lblAutor: UILabel!
-    @IBOutlet weak var ctLbTop: NSLayoutConstraint!
+    @IBOutlet weak var LclblTop: NSLayoutConstraint!
     
     let quotesManager = QuotesManager()
     var timer:Timer?
@@ -54,7 +54,7 @@ class QuotesViewController: UIViewController {
     func showRandomQuote(){
         let quote = quotesManager.getRandomQuote()
         lblQuote.text = quote.quote
-        lblAutor.text = quote.autor
+        lblAutor.text = quote.author
         imgPhoto.image = UIImage(named: quote.image)
         imgPhotoBg.image = imgPhoto.image
         
@@ -62,7 +62,7 @@ class QuotesViewController: UIViewController {
         lblAutor.alpha = 0.0
         imgPhoto.alpha = 0.0
         imgPhotoBg.alpha = 0.0
-        ctLbTop.constant = 50
+        LclblTop.constant = 10
         view.layoutIfNeeded()
         
         UIView.animate(withDuration: 2.5) {
@@ -70,7 +70,7 @@ class QuotesViewController: UIViewController {
             self.lblAutor.alpha = 1.0
             self.imgPhoto.alpha = 1.0
             self.imgPhotoBg.alpha = 0.25
-            self.ctLbTop.constant = 10
+            self.LclblTop.constant = 10
             self.view.layoutIfNeeded()
         }
         

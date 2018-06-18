@@ -10,7 +10,7 @@ import Foundation
 
 struct Quote: Codable /*Encodable, Decodable */ {
     let quote:String!
-    let autor:String!
+    let author:String!
     let image:String!
     
     var quotesFormatted: String {
@@ -18,6 +18,6 @@ struct Quote: Codable /*Encodable, Decodable */ {
     }
     
     var autorFormatted:String {
-        return "- " + autor + " -"
+        return "- " + author + " -"
     }
 }
