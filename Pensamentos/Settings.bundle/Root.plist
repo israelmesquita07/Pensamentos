@@ -23,6 +23,8 @@
 			<string>Tempo em segundos para mudar</string>
 			<key>Key</key>
 			<string>time</string>
+			<key>DefaultValue</key>
+			<string></string>
 		</dict>
 		<dict>
 			<key>Type</key>
