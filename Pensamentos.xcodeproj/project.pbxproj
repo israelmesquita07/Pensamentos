@@ -18,6 +18,7 @@
 		07C826F320D686C500912415 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C826F220D686C500912415 /* Quote.swift */; };
 		07C826F520D6882C00912415 /* QuotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C826F420D6882C00912415 /* QuotesManager.swift */; };
 		07C826F720D6891A00912415 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C826F620D6891A00912415 /* Configuration.swift */; };
+		07C826FF20E1D9E600912415 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 07C826FE20E1D9E600912415 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		07C826F220D686C500912415 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		07C826F420D6882C00912415 /* QuotesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesManager.swift; sourceTree = "<group>"; };
 		07C826F620D6891A00912415 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		07C826FE20E1D9E600912415 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				07C826EF20D6817400912415 /* Controllers */,
 				071FEEDD20D350850017D4B2 /* Assets.xcassets */,
 				071FEEE220D350850017D4B2 /* Info.plist */,
+				07C826FE20E1D9E600912415 /* Settings.bundle */,
 			);
 			path = Pensamentos;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				071FEEE120D350850017D4B2 /* LaunchScreen.storyboard in Resources */,
 				071FEEDE20D350850017D4B2 /* Assets.xcassets in Resources */,
 				071FEEEB20D3511D0017D4B2 /* Savoye LET.ttc in Resources */,
+				07C826FF20E1D9E600912415 /* Settings.bundle in Resources */,
 				071FEEDC20D350850017D4B2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
